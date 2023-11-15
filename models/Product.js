@@ -24,7 +24,6 @@ Product.init(
       },
       {
         product: {
-          id: Category.id,
           type:DataTypes.INTEGER,
           primaryKey:true,
           autoIncrement:true,

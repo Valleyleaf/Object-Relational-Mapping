@@ -6,14 +6,14 @@ class Tag extends Model {}
 
 Tag.init(
   {
-    {
+    
       id: {
         type:DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true,
         allownull: false,
+        references: Tag.id
     }
-        },
   },
   {
     sequelize,
