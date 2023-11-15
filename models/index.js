@@ -23,7 +23,7 @@ Tag.belongsTo(Product, {
 Product.belongsToMany(Tag, {
   foreignKey: 'tag_id',
 });
-
+//This should work but I am getting an error? 
 
 module.exports = {
   Product,
