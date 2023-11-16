@@ -14,32 +14,18 @@ Product.init(
           primaryKey:true,
           autoIncrement:true,
           allownull: false,
-      }
-          },
-      {
+      },
         product_name: {
           type:DataTypes.STRING,
           allownull: false,
-      }
       },
-      {
-        product: {
-          type:DataTypes.INTEGER,
-          primaryKey:true,
-          autoIncrement:true,
-          allownull: false,
-      }
-      },
-      {
         price: {
           type:DataTypes.DECIMAL,
           allownull: false,
           validate: {
             isDecimal: true,
           },
-      }
       },
-      {
         stock: {
           type:DataTypes.INTEGER,
           allownull: false,
@@ -47,13 +33,11 @@ Product.init(
           validate: {
             isInt: true,
           }
-      }
       },
-      {
         category_id: {
           type:DataTypes.INTEGER,
           }
-        },
+  },
   {
     sequelize,
     timestamps: false,
