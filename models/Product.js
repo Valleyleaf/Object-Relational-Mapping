@@ -15,10 +15,12 @@ Product.init(
           autoIncrement:true,
           allownull: false,
       },
+
         product_name: {
           type:DataTypes.STRING,
           allownull: false,
       },
+
         price: {
           type:DataTypes.DECIMAL,
           allownull: false,
@@ -26,6 +28,7 @@ Product.init(
             isDecimal: true,
           },
       },
+
         stock: {
           type:DataTypes.INTEGER,
           allownull: false,
@@ -34,10 +37,11 @@ Product.init(
             isInt: true,
           }
       },
+
         category_id: {
           type:DataTypes.INTEGER,
-          }
-  },
+          },
+},
   {
     sequelize,
     timestamps: false,

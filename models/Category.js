@@ -15,7 +15,8 @@ Category.init(
     category_name: {
       type:DataTypes.STRING,
       allownull: false,
-  },
+  },  
+},
   {
     sequelize,
     timestamps: false,

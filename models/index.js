@@ -11,17 +11,22 @@ const ProductTag = require('./ProductTag');
 // Products belongToMany Tags (through ProductTag)
 
 // Tags belongToMany Products (through ProductTag)
-Product.belongsTo(Category, {
-  foreignKey: 'category_id',
-});
 Category.hasMany(Product, {
   foreignKey: 'category_id',
 });
-Tag.belongsTo(Product, {
-  foreignKey: 'product_id',
+Product.belongsTo(Category, {
+  foreignKey: 'category_id',
 });
+
+// Tag belong to many products 
+Tag.belongsToMany(Product, {
+  through: ProductTag,
+  foreigngKey: 'product_id',
+});
+//This products have many tag so we need productTag
 Product.belongsToMany(Tag, {
-  foreignKey: 'tag_id',
+  through: ProductTag,
+  foreignKey: 'tag_id', 
 });
 //This should work but I am getting an error? 
 

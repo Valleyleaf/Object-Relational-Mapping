@@ -11,8 +11,10 @@ Tag.init(
         primaryKey:true,
         autoIncrement:true,
         allownull: false,
-        references: Tag.id
-    }
+    },
+    tag_name:{
+      type:DataTypes.STRING,
+    },
   },
   {
     sequelize,
