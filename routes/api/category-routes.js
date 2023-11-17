@@ -49,16 +49,20 @@ router.post('/', async (req, res) => {
   // create a new category
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   // update a category by its `id` value
-  category.findByPk(categoryId)
-  .then(category => {
-    if (category) {
-
-    }
-  }
-  )
-});
+  try{
+    const categoryUpdateID = await Tag.update(req.body,{
+      where: {
+        id: req.params.id
+      }
+    })
+    res.status(200).json(categoryUpdateID)
+   }catch(err){
+    console.log(err);
+    res.status(400).json(err)
+   }
+  });
 
 router.delete('/:id', async (req, res) => {
   // delete a category by its `id` value
