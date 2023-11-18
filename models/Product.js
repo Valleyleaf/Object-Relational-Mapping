@@ -13,12 +13,12 @@ Product.init(
           type:DataTypes.INTEGER,
           primaryKey:true,
           autoIncrement:true,
-          allownull: false,
+          allowNull: false,
       },
 
         product_name: {
           type:DataTypes.STRING,
-          allownull: false,
+          allowNull: false,
       },
 
         price: {
@@ -32,7 +32,7 @@ Product.init(
         stock: {
           type:DataTypes.INTEGER,
           allownull: false,
-          default: 10,
+          defaultValue: 10,
           validate: {
             isInt: true,
           }

@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   // find all products
   // be sure to include its associated Category and Tag data
   try {
-    const Product = await Product.findall({include: Category, Tag,});
+    const Product = await Product.findAll({include: Category, Tag,});
     res.json(Product);
     }catch (error) {
       console.error(error)
@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
   try {
-    const ProductTag = await ProductTag.findall({include: Category, Tag,});
+    const ProductTag = await ProductTag.findAll({include: Category, Tag,});
     res.json(ProductTag);
     }catch (error) {
       console.error(error)
@@ -112,7 +112,7 @@ router.delete('/:id', async (req, res) => {
     const productData = await Product.destroy({
       where: {id: req.params.id}
     });
-    if (!productDataData) {
+    if (!productData) {
       res.status(404).json({message: 'No product matching ID found'})
       return;
     }
