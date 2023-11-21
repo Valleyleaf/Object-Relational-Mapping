@@ -32,7 +32,6 @@ ProductTag.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'product_tag',
-    // Spelling error here? producttag vs product_tag
   }
 );
 

@@ -22,12 +22,14 @@ Product.belongsTo(Category, {
 // Tag belong to many products 
 Tag.belongsToMany(Product, {
   through: ProductTag,
-  foreignKey: 'product_id',
+  foreignKey: 'tag_id',
+  onDelete: 'CASCADE',
 });
 //This products have many tag so we need productTag
 Product.belongsToMany(Tag, {
   through: ProductTag,
-  foreignKey: 'tag_id', 
+  foreignKey: 'product_id', 
+  onDelete: 'CASCADE',
 });
 
 module.exports = {
